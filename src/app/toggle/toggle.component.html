@@ -1,0 +1,11 @@
+<div>
+  <button [style.display]="'inline'" class="btn-info" (click)="toggleFunc()">Display Details</button><p [style.display]="'inline'" *ngIf="toggleValue">
+      toggle works!
+    </p>
+  <div
+      *ngFor="let btnClick of btnClicks"
+      [ngStyle]="{backgroundColor: btnClick >= 5 ? 'blue' : 'transparent'}"
+      [ngClass]="{'white-text': btnClick >= 5}"
+      >{{btnClick}}
+  </div>
+</div>

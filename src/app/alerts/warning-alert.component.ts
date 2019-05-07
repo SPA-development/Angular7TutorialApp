@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
     styles: [`
         p {
             background: red;
+            width: 50%;
         }
     `]
 })

@@ -1,0 +1,17 @@
+<section>
+    <h1>Binding</h1>
+    <hr>
+    <p>{{ dataBinding }}</p>
+    <p [innerHTML]="attributeBinding"></p>
+
+    <div>
+        <input type="text" (input)="eventBinding($event)">
+    </div>
+    <br>
+    <div>
+        <input type="text" [(ngModel)]="twoWayBinding">
+        <p>Type something in either field above to see it outputted below:</p>
+        <p>{{twoWayBinding}}</p>
+    </div>
+    <hr>
+</section>
