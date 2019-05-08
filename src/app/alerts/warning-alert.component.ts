@@ -3,12 +3,11 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-warning',
     template: `
-        <p>Oh no!
-        Something went wrong!<p>
+        <p>Achtung!<p>
     `,
     styles: [`
         p {
-            background: red;
+            background: orange;
             width: 50%;
         }
     `]

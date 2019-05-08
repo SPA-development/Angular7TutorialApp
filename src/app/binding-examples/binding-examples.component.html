@@ -1,14 +1,16 @@
 <section>
-    <h1>Binding</h1>
+    <h1>Data Binding</h1>
+    <p>app-binding-examples works!</p>
     <hr>
     <p>{{ dataBinding }}</p>
     <p [innerHTML]="attributeBinding"></p>
-
+    <p>An example of event binding.</p>
     <div>
         <input type="text" (input)="eventBinding($event)">
     </div>
     <br>
     <div>
+        <p>An example of two-way binding.</p>
         <input type="text" [(ngModel)]="twoWayBinding">
         <p>Type something in either field above to see it outputted below:</p>
         <p>{{twoWayBinding}}</p>

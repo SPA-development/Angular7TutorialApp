@@ -3,12 +3,17 @@
   <div class="row">
     <div class="col-xs-12">
       <h1>
-        Welcome to {{ title }}!
+        {{ title }} Stuff
       </h1>
       <br>
-      <app-server></app-server>
-      <app-binding-examples></app-binding-examples>
-      <app-toggle></app-toggle>
+      <section>
+        <button class="btn-primary" type="button" (click)="showEarlierWork = !showEarlierWork">Show Earlier Work</button>
+        <div *ngIf="showEarlierWork">
+          <app-alert-container></app-alert-container>
+          <app-binding-examples></app-binding-examples>
+          <app-toggle></app-toggle>
+        </div>
+      </section>
     </div>
   </div>
 </section>
