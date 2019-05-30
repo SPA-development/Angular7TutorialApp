@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FailureComponent } from './earlierWork/alerts/failure-alert.component';
@@ -17,6 +18,7 @@ import { ShoppingListEditComponent } from './udemy-project-one/shopping-list/sho
 import { RecipeListComponent } from './udemy-project-one/recipe-book/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './udemy-project-one/recipe-book/recipe-list/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './udemy-project-one/recipe-book/recipe-detail/recipe-detail.component';
+import { UserService } from './udemy-project-one/services/user.service';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,12 @@ import { RecipeDetailComponent } from './udemy-project-one/recipe-book/recipe-de
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
